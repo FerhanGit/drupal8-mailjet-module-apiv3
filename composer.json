@@ -14,6 +14,8 @@
       "url": "git@github.com:mailjet/mailjet-apiv3-php.git"
     }
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "phpmailer/phpmailer": "~5.2",
     "mailjet/mailjet-apiv3-php": "dev-master"
