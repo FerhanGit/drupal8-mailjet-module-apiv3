@@ -8,17 +8,10 @@
     "issues": "https://www.drupal.org/project/issues/mailjet",
     "source": "http://cgit.drupalcode.org/mailjet"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:mailjet/mailjet-apiv3-php.git"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "phpmailer/phpmailer": "~5.2",
-    "mailjet/mailjet-apiv3-php": "dev-master"
+    "phpmailer/phpmailer": "~5.2"
   },
   "autoload": {
     "psr-4": {
