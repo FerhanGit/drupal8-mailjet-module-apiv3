@@ -23,7 +23,7 @@ class StatsAdminController extends ControllerBase {
     }
 
     $mailjetIframe = MailjetApi::getMailjetIframe($config_mailjet->get('mailjet_username'), $config_mailjet->get('mailjet_password'));
-    $mailjetIframe->setInitialPage(\MailjetIframe\MailjetIframe::PAGE_STATS);
+    $mailjetIframe->setInitialPage(\MailjetTools\MailjetIframe::PAGE_STATS);
 
     $build = [
       '#type' => 'inline_template',

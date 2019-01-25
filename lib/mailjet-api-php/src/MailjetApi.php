@@ -28,7 +28,11 @@ class MailjetApi
             $mjClient->addRequestOption(CURLOPT_USERAGENT, 'kickstart');
             $mjClient->addRequestOption('headers', ['User-Agent' => 'kickstart']);
 
+        } else {
+            $mjClient->addRequestOption(CURLOPT_USERAGENT, 'drupal-3.0');
+            $mjClient->addRequestOption('headers', ['User-Agent' => 'drupal-3.0']);
         }
+
         // We turn of secure protocol for API requests if the wordpress does not support it
         if (empty($_SERVER['HTTPS']) || (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'off') || $_SERVER['SERVER_PORT'] != 443) {
             $mjClient->setSecureProtocol(false);
@@ -331,7 +335,7 @@ class MailjetApi
 
     public static function getMailjetIframe($username, $password)
     {
-      $mailjetIframe = new \MailjetIframe\MailjetIframe($username, $password, false);
+      $mailjetIframe = new \MailjetTools\MailjetIframe($username, $password, false);
 
       $language = \Drupal::languageManager()->getCurrentLanguage();
       $lang_codes_map = [
@@ -353,13 +357,13 @@ class MailjetApi
           'contacts',
           'stats',
         ))
-        ->turnDocumentationProperties(\MailjetIframe\MailjetIframe::OFF)
-        ->turnNewContactListCreation(\MailjetIframe\MailjetIframe::ON)
-        ->turnMenu(\MailjetIframe\MailjetIframe::OFF)
-        ->turnFooter(\MailjetIframe\MailjetIframe::ON)
-        ->turnBar(\MailjetIframe\MailjetIframe::ON)
-        ->turnCreateCampaignButton(\MailjetIframe\MailjetIframe::ON)
-        ->turnSendingPolicy(\MailjetIframe\MailjetIframe::ON);
+        ->turnDocumentationProperties(\MailjetTools\MailjetIframe::OFF)
+        ->turnNewContactListCreation(\MailjetTools\MailjetIframe::ON)
+        ->turnMenu(\MailjetTools\MailjetIframe::OFF)
+        ->turnFooter(\MailjetTools\MailjetIframe::ON)
+        ->turnBar(\MailjetTools\MailjetIframe::ON)
+        ->turnCreateCampaignButton(\MailjetTools\MailjetIframe::ON)
+        ->turnSendingPolicy(\MailjetTools\MailjetIframe::ON);
 
       return $mailjetIframe;
     }

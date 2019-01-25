@@ -14,16 +14,11 @@
     {
       "type": "vcs",
       "url": "git@github.com:mailjet/mailjet-apiv3-php.git"
-    },
-    {
-      "type": "vcs",
-      "url": "git@github.com:mailjet/Mailjet-iframe-v3.git"
     }
   ],
   "require": {
     "phpmailer/phpmailer": "~5.2",
-    "mailjet/mailjet-apiv3-php": "dev-master",
-    "mailjet/Mailjet-iframe-v3": "dev-master"
+    "mailjet/mailjet-apiv3-php": "dev-master"
   },
   "autoload": {
     "psr-4": {
