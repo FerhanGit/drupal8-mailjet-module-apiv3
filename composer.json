@@ -1,6 +1,5 @@
 {
   "name": "mailjet/drupal8-mailjet-module-apiv3",
-  "type": "drupal-module",
   "description": "Mailjet Drupal8 integration",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
