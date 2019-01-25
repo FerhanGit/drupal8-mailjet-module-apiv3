@@ -23,18 +23,5 @@
     "psr-4": {
       "MailjetTools\\": "lib/mailjet-api-php/src/"
     }
-  },
-  "config": {
-    "preferred-install": "dist"
-  },
-  "scripts": {
-	 "post-install-cmd": [
-	  "find ./vendor -name '.git' | xargs rm -rf",
-	  "find ./vendor -name '.gitignore' | xargs rm -rf"
-	],
-	"post-update-cmd": [
-	  "find ./vendor -name '.git' | xargs rm -rf",
-	  "find ./vendor -name '.gitignore' | xargs rm -rf"
-	]
   }
 }
