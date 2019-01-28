@@ -10,7 +10,7 @@ namespace Drupal\mailjet\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use MailJet\MailJet;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 use Mailjet\Resources;
 
 class MailjetApiForm extends ConfigFormBase {

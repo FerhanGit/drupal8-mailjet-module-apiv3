@@ -18,7 +18,7 @@ use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Link;
 use \Drupal\Core\Url;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 use Exception;
 use Mailjet\Client;
 use Mailjet\Resources;
@@ -111,7 +111,7 @@ function mailjet_new() {
     $key = trim($config_mailjet->get('mailjet_username'));
     $secret_key = trim($config_mailjet->get('mailjet_password'));
 
-    $mailjetApiClient = MailjetTools\MailjetApi::getApiClient($key, $secret_key);
+    $mailjetApiClient = Drupal\mailjet\MailjetApi::getApiClient($key, $secret_key);
     return $mailjetApiClient;
   }
   if (!($key) && !($secret_key)) {

@@ -7,7 +7,7 @@
 namespace Drupal\mailjet_list\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 
 class ListMailjetController extends ControllerBase {
 
@@ -23,7 +23,7 @@ class ListMailjetController extends ControllerBase {
     }
 
     $mailjetIframe = MailjetApi::getMailjetIframe($config_mailjet->get('mailjet_username'), $config_mailjet->get('mailjet_password'));
-    $mailjetIframe->setInitialPage(\MailjetTools\MailjetIframe::PAGE_CONTACTS);
+    $mailjetIframe->setInitialPage(\Drupal\mailjet\MailjetIframe::PAGE_CONTACTS);
 
     $build = [
       '#type' => 'inline_template',

@@ -1,6 +1,6 @@
 <?php
 
-namespace MailjetTools;
+namespace Drupal\mailjet;
 
 /**
  *

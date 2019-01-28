@@ -8,7 +8,7 @@ namespace Drupal\mailjet\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 use Mailjet\Client;
 use Mailjet\Resources;
 

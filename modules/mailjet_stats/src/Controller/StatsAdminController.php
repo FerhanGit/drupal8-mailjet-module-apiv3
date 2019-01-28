@@ -7,7 +7,7 @@
 namespace Drupal\mailjet_stats\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 
 class StatsAdminController extends ControllerBase {
 
@@ -23,7 +23,7 @@ class StatsAdminController extends ControllerBase {
     }
 
     $mailjetIframe = MailjetApi::getMailjetIframe($config_mailjet->get('mailjet_username'), $config_mailjet->get('mailjet_password'));
-    $mailjetIframe->setInitialPage(\MailjetTools\MailjetIframe::PAGE_STATS);
+    $mailjetIframe->setInitialPage(\Drupal\mailjet\MailjetIframe::PAGE_STATS);
 
     $build = [
       '#type' => 'inline_template',

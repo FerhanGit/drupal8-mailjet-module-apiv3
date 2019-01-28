@@ -5,7 +5,7 @@ namespace Drupal\mailjet_subscription\Form;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Drupal\mailjet_subscription\Entity\SubscriptionForm;
 use Drupal\user\Entity\User;

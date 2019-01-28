@@ -1,6 +1,6 @@
 <?php
 
-namespace MailjetTools;
+namespace Drupal\mailjet;
 
 use Exception;
 use Mailjet\Client;
@@ -12,7 +12,7 @@ class MailjetApi
     public static $mjApiKey = null;
 
     public static function getApiClient($mailjetApikey = null, $mailjetApiSecret = null)
-    {
+    { var_dump($mailjetApikey);exit;
         if (self::$mjApiClient instanceof Client) {
             return self::$mjApiClient;
         }
@@ -335,7 +335,7 @@ class MailjetApi
 
     public static function getMailjetIframe($username, $password)
     {
-      $mailjetIframe = new \MailjetTools\MailjetIframe($username, $password, false);
+      $mailjetIframe = new \Drupal\mailjet\MailjetIframe($username, $password, false);
 
       $language = \Drupal::languageManager()->getCurrentLanguage();
       $lang_codes_map = [
@@ -357,13 +357,13 @@ class MailjetApi
           'contacts',
           'stats',
         ))
-        ->turnDocumentationProperties(\MailjetTools\MailjetIframe::OFF)
-        ->turnNewContactListCreation(\MailjetTools\MailjetIframe::ON)
-        ->turnMenu(\MailjetTools\MailjetIframe::OFF)
-        ->turnFooter(\MailjetTools\MailjetIframe::ON)
-        ->turnBar(\MailjetTools\MailjetIframe::ON)
-        ->turnCreateCampaignButton(\MailjetTools\MailjetIframe::ON)
-        ->turnSendingPolicy(\MailjetTools\MailjetIframe::ON);
+        ->turnDocumentationProperties(\Drupal\mailjet\MailjetIframe::OFF)
+        ->turnNewContactListCreation(\Drupal\mailjet\MailjetIframe::ON)
+        ->turnMenu(\Drupal\mailjet\MailjetIframe::OFF)
+        ->turnFooter(\Drupal\mailjet\MailjetIframe::ON)
+        ->turnBar(\Drupal\mailjet\MailjetIframe::ON)
+        ->turnCreateCampaignButton(\Drupal\mailjet\MailjetIframe::ON)
+        ->turnSendingPolicy(\Drupal\mailjet\MailjetIframe::ON);
 
       return $mailjetIframe;
     }

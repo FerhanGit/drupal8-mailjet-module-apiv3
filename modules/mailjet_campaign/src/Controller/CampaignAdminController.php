@@ -7,7 +7,7 @@
 namespace Drupal\mailjet_campaign\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use MailjetTools\MailjetApi;
+use Drupal\mailjet\MailjetApi;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class CampaignAdminController extends ControllerBase {
@@ -24,7 +24,7 @@ class CampaignAdminController extends ControllerBase {
     }
 
     $mailjetIframe = MailjetApi::getMailjetIframe($config_mailjet->get('mailjet_username'), $config_mailjet->get('mailjet_password'));
-    $mailjetIframe->setInitialPage(\MailjetTools\MailjetIframe::PAGE_CAMPAIGNS);
+    $mailjetIframe->setInitialPage(\Drupal\mailjet\MailjetIframe::PAGE_CAMPAIGNS);
     $callbackurl = urlencode($base_url . '/campaigncallback');
 //    $mailjetIframe->setCallback($callbackurl);
 
