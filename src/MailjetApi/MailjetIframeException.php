@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\mailjet;
+namespace Drupal\mailjet\MailjetApi;
 
 /**
  *

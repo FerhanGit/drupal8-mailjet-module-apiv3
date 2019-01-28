@@ -12,7 +12,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Locale\Country;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
-use MailJet\MailJet;
 use UsStates\UsStates;
 
 class MailjetSettingsForm extends ConfigFormBase {
@@ -229,13 +228,10 @@ class MailjetSettingsForm extends ConfigFormBase {
     ];
 
     // States only show up for US citizens
-
-    $path = drupal_get_path('module', 'mailjet');
-    include $path . '/lib/mailjet-api-php/src/UsStates.php';
     $form['infos']['address_state'] = [
       '#type' => 'select',
       '#title' => t('State'),
-      '#options' => UsStates::getStates(),
+      '#options' => '', \Drupal\mailjet\UsStates::getStates(),
       '#default_value' => !empty($user_infos) ? $user_infos['AddressState'] : '',
       '#required' => TRUE,
       '#states' => [

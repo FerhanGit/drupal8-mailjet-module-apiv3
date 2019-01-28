@@ -1,6 +1,6 @@
 <?php
 
-namespace UsStates;
+namespace Drupal\mailjet;
 
 class UsStates {
     public static function getStates(){

@@ -1,9 +1,9 @@
 <?php
 
-namespace Drupal\mailjet;
+namespace Drupal\mailjet\MailjetApi;
 
-use Drupal\mailjet\MailjetApi;
-use Drupal\mailjet\MailjetIframeException;
+use Drupal\mailjet\MailjetApi\MailjetApi;
+use Drupal\mailjet\MailjetApi\MailjetIframeException;
 
 
 /**
